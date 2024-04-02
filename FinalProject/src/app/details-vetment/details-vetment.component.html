@@ -9,15 +9,15 @@
         </div>
         <div class="details" #details>
             <div class="presentation">
-                <p class="material">Babaton</p>
-                <h2>Cella Satin Dress <span> $168</span></h2>
-                <p class="text"> Satin fit-and-flare maxi dress</p>
+                <p class="material">{{vetement?.categorie}}</p>
+                <h2>{{vetement?.nom}} <span>$168</span></h2>
+                <p class="text">{{vetement?.product}}</p>
             </div>
 
             <div class="color-choix">
-                <p>Aquamarine Green <span>#116344</span></p>
-                <div class="color-option"
-                    style="background-image: url('https://aritzia.scene7.com/is/image/Aritzia/swatch/s24_01_a08_116344_31973_sw.jpg');">
+                <p>{{vetement?.couleurName}} <span>#116344</span></p>
+                <div class="color-option" style="background-image: url(
+                    {{vetement?.couleur}});">
                 </div>
             </div>
 
@@ -35,10 +35,7 @@
             <button class="btn ">Add to Cart</button>
             <h2>Always makes the cut </h2>
             <p class="description">
-                This is a fit-and-flare maxi dress with a back cutout and classic fit. It’s made from Naia™ Renew — a
-                drapey satin fabric with a lustrous, glossy sheen that’s extremely soft to the touch. It’s produced from
-                recycled waste material and wood-based fibres from responsibly managed forests with a focus on
-                protecting ecosystems and providing social benefits for local communities.
+                {{vetement?.description}}
             </p>
             <ul>
                 <li><a>Details</a></li>
