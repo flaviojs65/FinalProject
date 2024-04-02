@@ -9,6 +9,9 @@ import { vetements, Vetement } from '../vetments';
 })
 export class DetailsVetmentComponent implements OnInit, AfterViewInit {
   vetement: Vetement | undefined;
+
+  vetements: Vetement[] = [...vetements];
+
   @ViewChild('details') details!: ElementRef;
 
   constructor(private route: ActivatedRoute) { }
