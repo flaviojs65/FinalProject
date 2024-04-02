@@ -1,0 +1,66 @@
+/* Nav Css*/
+.login-button {
+    background-color: #b29b8300;
+    color: #B29B83;
+    font-size: 25px;
+    font-weight: 200;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 0;
+
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(239, 239, 239, 0.1);
+}
+
+.navbar-brand {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.nav-link {
+    color: #000000;
+    font-weight: 500;
+    position: relative;
+    font-size: large;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: #000000;
+}
+
+@media (min-width :991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #B29B83;
+        visibility: hidden;
+        transition: .3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link:active::before {
+        visibility: visible;
+        width: 100%;
+    }
+}

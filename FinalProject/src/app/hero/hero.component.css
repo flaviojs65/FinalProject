@@ -1,0 +1,12 @@
+.hero-section {
+    background-image: url('/assets/Hero/Group 26.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 30px;
+}

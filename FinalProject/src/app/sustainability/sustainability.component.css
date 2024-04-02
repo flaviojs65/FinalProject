@@ -1,0 +1,41 @@
+.sustainability {
+    background-image: url('/assets/Hero/Sustainability.png');
+    margin-top: 100px;
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.text {
+    position: relative;
+}
+
+.text-sustainability {
+    position: absolute;
+    top: 260px;
+    left: 580px;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.text-sustainability p {
+    font-size: 15px;
+}
+
+
+@media (max-width: 767px) {
+    .text-sustainability p {
+        display: 0px;
+    }
+
+    .sustainability {
+        height: 200px;
+        background-position: center center;
+        background-size: cover;
+
+    }
+}
