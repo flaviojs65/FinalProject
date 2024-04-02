@@ -2,19 +2,17 @@
 <div class="outer-container mx-0 " style="margin-top: 100px;">
     <div class="container-fluid mx-auto">
         <div class="row">
-            <div class="col-6 col-sm-6 col-md-3 p-0" *ngFor="let vetment of vetments ,let i = index ">
+            <div class="col-6 col-sm-6 col-md-3 p-0" *ngFor="let vetement of vetements ,let i = index ">
                 <div class="image-container"
-                    (mouseover)="currentImage[i]=vetment.images[vetment.images.length - 1]; isHovering[i]=true"
-                    (mouseout)="currentImage[i]=vetment.images[0]; isHovering[i]=false"
-                    style="cursor: pointer; position: relative;">
-
+                    (mouseover)="currentImage[i]=vetement.images[vetement.images.length - 1]; isHovering[i]=true"
+                    (mouseout)="currentImage[i]=vetement.images[0]; isHovering[i]=false"
+                    style="cursor: pointer; position: relative;" [routerLink]="['/detail', vetement.id]">
                     <img [src]="currentImage[i]" class="img-fluid w-100 h-100">
-                    <button [ngStyle]="{'display': isHovering[i] ? 'block' : 'none'}">Detalles</button>
+                    <button [ngStyle]="{'display': isHovering[i] ? 'block' : 'none'}">Details</button>
                     <div class="image-text">
-                        <h5>{{vetment.nom}}</h5>
-                        <p>${{vetment.prix}}</p>
+                        <h5>{{vetement.nom}}</h5>
+                        <p>${{vetement.prix}}</p>
                     </div>
-
                 </div>
             </div>
         </div>

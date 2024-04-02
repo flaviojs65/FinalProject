@@ -11,7 +11,7 @@ import { Vetement, vetements } from '../vetments';
 export class ListeVetmentsComponent implements OnInit {
 
   isHovering: boolean[] = [];
-  vetments: Vetement[] = [...vetements];
+  vetements: Vetement[] = [...vetements];
   currentImage: string[] = [];
 
   ngOnInit(): void {

@@ -1,0 +1,53 @@
+<app-menu></app-menu>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <div *ngFor="let image of vetement?.images">
+                <img [src]="image" class="img-fluid w-100 h-100" #lastImage>
+            </div>
+        </div>
+        <div class="details" #details>
+            <div class="presentation">
+                <p class="material">Babaton</p>
+                <h2>Cella Satin Dress <span> $168</span></h2>
+                <p class="text"> Satin fit-and-flare maxi dress</p>
+            </div>
+
+            <div class="color-choix">
+                <p>Aquamarine Green <span>#116344</span></p>
+                <div class="color-option"
+                    style="background-image: url('https://aritzia.scene7.com/is/image/Aritzia/swatch/s24_01_a08_116344_31973_sw.jpg');">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="sizeSelect">Modelis 5'10/178 cm wearing a size S </label>
+                <select class="form-control" id="sizeSelect">
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+            </div>
+            <button class="btn ">Add to Cart</button>
+            <h2>Always makes the cut </h2>
+            <p class="description">
+                This is a fit-and-flare maxi dress with a back cutout and classic fit. It’s made from Naia™ Renew — a
+                drapey satin fabric with a lustrous, glossy sheen that’s extremely soft to the touch. It’s produced from
+                recycled waste material and wood-based fibres from responsibly managed forests with a focus on
+                protecting ecosystems and providing social benefits for local communities.
+            </p>
+            <ul>
+                <li><a>Details</a></li>
+                <li><a>Shipping & Returns</a></li>
+                <li><a>Size Guide</a></li>
+                <li><a>Reviews</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
