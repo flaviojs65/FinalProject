@@ -10,6 +10,7 @@ import { SustainabilityComponent } from './sustainability/sustainability.compone
 import { FooterComponent } from './footer/footer.component';
 import { ListeVetmentsComponent } from './liste-vetments/liste-vetments.component';
 import { HomeComponent } from './home/home.component';
+import { DetailsVetmentComponent } from './details-vetment/details-vetment.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     SustainabilityComponent,
     FooterComponent,
     ListeVetmentsComponent,
-    HomeComponent
+    HomeComponent,
+    DetailsVetmentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,105 @@
+.container-fluid {
+    margin-top: 50px;
+}
+
+.details {
+    position: sticky;
+    top: 50px;
+    height: 100vh;
+    overflow-y: auto;
+    width: 400px;
+    z-index: 2;
+    padding-top: 100px;
+}
+
+.image {
+    width: 50%;
+}
+
+
+
+.color-option {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    padding: 2px;
+    background-clip: content-box;
+}
+
+.form-control {
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 0px;
+}
+
+.btn {
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    border-radius: 0px;
+    height: 45px;
+
+}
+
+.presentation h2 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.text {
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+.material {
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+
+.color-choix p {
+    display: flex;
+    font-size: 13px;
+    margin-bottom: 5px;
+    justify-content: space-between;
+
+}
+
+.color-choix span {
+    display: flex;
+    font-size: 12px;
+
+}
+
+label {
+    font-size: 13px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 12px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 12px;
+    font-weight: 300;
+}
