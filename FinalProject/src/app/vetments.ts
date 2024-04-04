@@ -105,5 +105,44 @@ export const vetements: Vetement[] = [
         couleurName: "Cruise Blue",
         categorie: "robe",
         product: "Japanese satin pleated crewneck maxi dress"
-    }
+    },
+    {
+        id: 6,
+        nom: "New Lune Dress",
+        prix: 65,
+        description: "A resort-wear essential, this is a wrap mini dress with side ties. It’s made with Relux Jersey, an ultra-soft and drapey fabric that uses LENZING™ ECOVERO™ Viscose — responsibly sourced wood-based fibres produced through a process that reduces impact on forests, biodiversity and water supply.",
+        images: [
+            "assets/Vetments/Dresses/NewLuneDress/NewLuneDress1.jpeg",
+            "assets/Vetments/Dresses/NewLuneDress/NewLuneDress2.webp",
+            "assets/Vetments/Dresses/NewLuneDress/NewLuneDress3.webp",
+            "assets/Vetments/Dresses/NewLuneDress/NewLuneDress4.webp",
+            "assets/Vetments/Dresses/NewLuneDress/NewLuneDress5.webp",
+            "assets/Vetments/Dresses/NewLuneDress/NewLuneDress6.jpeg"],
+        quantite: 1,
+        taille: "S",
+        couleur: "https://aritzia.scene7.com/is/image/Aritzia/swatch/s24_04_a08_114668_27638_sw.jpg",
+        couleurName: "Slab Blue",
+        categorie: "Wilfred",
+        product: "Wrap mini dress"
+
+    },
+    {
+        id: 7,
+        nom: "Contour Off-Shoulder Dress",
+        prix: 98,
+        description: "This is an off-the-shoulder mini dress with long sleeves and double-layer fabric for a supportive fit. It’s made with Contour — luxe, ultra-flattering fabric coveted for its smoothing effect and second-skin feel. Nothing more essential.",
+        images: [
+            "assets/Vetments/Dresses/ContourOff-Shoulder/ContourOffShoulder1.webp",
+            "assets/Vetments/Dresses/ContourOff-Shoulder/ContourOffShoulder2.webp",
+            "assets/Vetments/Dresses/ContourOff-Shoulder/ContourOffShoulder3.webp",
+            "assets/Vetments/Dresses/ContourOff-Shoulder/ContourOffShoulder4.webp",
+            "assets/Vetments/Dresses/ContourOff-Shoulder/ContourOffShoulder5.webp",
+            "assets/Vetments/Dresses/ContourOff-Shoulder/ContourOffShoulder6.webp"],
+        quantite: 1,
+        taille: "S",
+        couleur: "https://aritzia.scene7.com/is/image/Aritzia/swatch/s24_99_a08_118305_1274_sw.jpg",
+        couleurName: "Black",
+        categorie: "Contour",
+        product: "Off-the-shoulder longsleeve mini"
+    },
 ];

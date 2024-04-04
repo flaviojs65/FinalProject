@@ -7,9 +7,10 @@
                     (mouseover)="currentImage[i]=vetement.images[vetement.images.length - 1]; isHovering[i]=true"
                     (mouseout)="currentImage[i]=vetement.images[0]; isHovering[i]=false"
                     style="cursor: pointer; position: relative;" [routerLink]="['/detail', vetement.id]">
-                    <img [src]="currentImage[i]" class="img-fluid w-100 h-100">
+                    <img *ngIf="imageLoaded[i]" [src]="currentImage[i]" class="img-fluid w-100 h-100">
+                    <img #image style="display: none" (load)="imageLoaded[i] = true" [src]="currentImage[i]">
                     <button [ngStyle]="{'display': isHovering[i] ? 'block' : 'none'}">Details</button>
-                    <div class="image-text">
+                    <div class="image-text" *ngIf="imageLoaded[i]">
                         <h5>{{vetement.nom}}</h5>
                         <p>${{vetement.prix}}</p>
                     </div>
