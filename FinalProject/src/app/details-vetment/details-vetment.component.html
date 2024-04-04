@@ -7,7 +7,7 @@
                 <img [src]="image" class="img-fluid w-100 h-100" #lastImage>
             </div>
         </div>
-        <div class="details" #details>
+        <div class="details">
             <div class="presentation">
                 <p class="material">{{vetement?.categorie}}</p>
                 <h2>{{vetement?.nom}} <span>$168</span></h2>
@@ -15,7 +15,7 @@
             </div>
 
             <div class="color-choix">
-                <p>{{vetement?.couleurName}} <span>#116344</span></p>
+                <p>{{vetement?.couleurName}} <span> #116344 </span></p>
                 <div class="color-option" style="background-image: url(
                     {{vetement?.couleur}});">
                 </div>
