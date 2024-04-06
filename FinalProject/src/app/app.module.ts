@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ListeVetmentsComponent } from './liste-vetments/liste-vetments.component';
 import { HomeComponent } from './home/home.component';
 import { DetailsVetmentComponent } from './details-vetment/details-vetment.component';
+import { AchatComponent } from './achat/achat.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DetailsVetmentComponent } from './details-vetment/details-vetment.compo
     FooterComponent,
     ListeVetmentsComponent,
     HomeComponent,
-    DetailsVetmentComponent
+    DetailsVetmentComponent,
+    AchatComponent
   ],
   imports: [
     BrowserModule,
