@@ -12,6 +12,8 @@ import { ListeVetmentsComponent } from './liste-vetments/liste-vetments.componen
 import { HomeComponent } from './home/home.component';
 import { DetailsVetmentComponent } from './details-vetment/details-vetment.component';
 import { AchatComponent } from './achat/achat.component';
+import { LoginComponent } from './login/login.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -25,11 +27,13 @@ import { AchatComponent } from './achat/achat.component';
     ListeVetmentsComponent,
     HomeComponent,
     DetailsVetmentComponent,
-    AchatComponent
+    AchatComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()
