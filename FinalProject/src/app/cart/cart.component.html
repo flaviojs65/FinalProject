@@ -1,0 +1,13 @@
+<app-menu></app-menu>
+<div *ngFor="let vetement of vetements  , let i = index">
+    <div *ngIf="i === 0">
+        <span>{{vetement.nom}}</span>
+        <span>{{vetement.prix}}</span>
+        <p> Index : {{i}}</p>
+    </div>
+    <span>{{vetement.nom}}</span>
+    <span>{{vetement.prix}}</span>
+    <p> Index : {{i}}</p>
+
+</div>
+<app-footer></app-footer>

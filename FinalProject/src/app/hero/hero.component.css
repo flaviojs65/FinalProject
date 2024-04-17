@@ -1,9 +1,9 @@
 .hero-section {
-    background-image: url('/assets/Hero/Group 26.png');
+    background-image: url('/assets/Hero/Prinicpal.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;

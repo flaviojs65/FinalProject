@@ -7,9 +7,10 @@ export interface Vetement {
     quantite: number;
     taille: string;
     couleur: string;
-    couleurName?: string;
+    couleurName: string;
     categorie: string;
     product: string;
+    newItem?: boolean;
 }
 
 export const vetements: Vetement[] = [
@@ -28,7 +29,7 @@ export const vetements: Vetement[] = [
         quantite: 1,
         taille: "M",
         couleurName: "Aquamarine Green",
-        couleur: "https://aritzia.scene7.com/is/image/Aritzia/swatch/s24_01_a08_116344_31973_sw.jpg",
+        couleur: "assets/color.png",
         categorie: "Babaton",
         product: "Satin fit-and-flare maxi dress"
     },
@@ -143,6 +144,87 @@ export const vetements: Vetement[] = [
         couleur: "https://aritzia.scene7.com/is/image/Aritzia/swatch/s24_99_a08_118305_1274_sw.jpg",
         couleurName: "Black",
         categorie: "Contour",
-        product: "Off-the-shoulder longsleeve mini"
+        product: "Off-the-shoulder longsleeve mini",
+
+    },
+    {
+        id: 8,
+        nom: "Franky Tassel",
+        prix: 120,
+        description: "This is a fit-and-flare maxi dress with a back cutout and classic fit. It’s made from Naia™ Renew — a drapey satin fabric with a lustrous, glossy sheen that’s extremely soft to the touch. It’s produced from recycled waste material and wood-based fibres from responsibly managed forests with a focus on protecting ecosystems and providing social benefits for local communities.",
+        images: [
+            "assets/BestSellers/FrankyTassel/FrankyTassel1.jpeg",
+            "assets/BestSellers/FrankyTassel/FrankyTassel2.jpeg",
+            "assets/BestSellers/FrankyTassel/FrankyTassel3.jpeg",
+            "assets/BestSellers/FrankyTassel/FrankyTassel4.jpeg",
+            "assets/BestSellers/FrankyTassel/FrankyTassel5.jpeg",
+            "assets/BestSellers/FrankyTassel/FrankyTassel6.jpeg"],
+        quantite: 1,
+        taille: "M",
+        couleurName: "Aquamarine Green",
+        couleur: "https://aritzia.scene7.com/is/image/Aritzia/swatch/s24_01_a08_116344_31973_sw.jpg",
+        categorie: "Babaton",
+        product: "Satin fit-and-flare maxi dress",
+        newItem: true
+    },
+    {
+        id: 9,
+        nom: "Jesse Metallic ",
+        prix: 120,
+        description: "This is a fit-and-flare maxi dress with a back cutout and classic fit. It’s made from Naia™ Renew — a drapey satin fabric with a lustrous, glossy sheen that’s extremely soft to the touch. It’s produced from recycled waste material and wood-based fibres from responsibly managed forests with a focus on protecting ecosystems and providing social benefits for local communities.",
+        images: [
+            "assets/BestSellers/JesseMetallic/JesseMetallic1.jpeg",
+            "assets/BestSellers/JesseMetallic/JesseMetallic2.jpeg",
+            "assets/BestSellers/JesseMetallic/JesseMetallic3.jpeg",
+            "assets/BestSellers/JesseMetallic/JesseMetallic4.jpeg",
+            "assets/BestSellers/JesseMetallic/JesseMetallic5.jpeg",
+            "assets/BestSellers/JesseMetallic/JesseMetallic6.jpeg"],
+        quantite: 1,
+        taille: "M",
+        couleurName: "Gold",
+        couleur: "assets/BestSellers/JesseMetallic/JesseMetallicColor.png",
+        categorie: "Babaton",
+        product: "Crochet Midi Dress",
+        newItem: true
+    },
+    {
+        id: 9,
+        nom: "Jesse Metallic ",
+        prix: 120,
+        description: "This is a fit-and-flare maxi dress with a back cutout and classic fit. It’s made from Naia™ Renew — a drapey satin fabric with a lustrous, glossy sheen that’s extremely soft to the touch. It’s produced from recycled waste material and wood-based fibres from responsibly managed forests with a focus on protecting ecosystems and providing social benefits for local communities.",
+        images: [
+            "assets/BestSellers/KayeOversized/KayeOversized1.jpeg",
+            "assets/BestSellers/KayeOversized/KayeOversized2.jpeg",
+            "assets/BestSellers/KayeOversized/KayeOversized3.jpeg",
+            "assets/BestSellers/KayeOversized/KayeOversized4.jpeg",
+            "assets/BestSellers/KayeOversized/KayeOversized5.jpeg",
+            "assets/BestSellers/KayeOversized/KayeOversized6.jpeg"],
+        quantite: 1,
+        taille: "M",
+        couleurName: "Gold",
+        couleur: "assets/BestSellers/KayeOversized/KayeOversizedColor.png",
+        categorie: "Babaton",
+        product: "Crochet Midi Dress",
+        newItem: true
+    },
+    {
+        id: 10,
+        nom: "Winona Jaine",
+        prix: 120,
+        description: "This is a fit-and-flare maxi dress with a back cutout and classic fit. It’s made from Naia™ Renew — a drapey satin fabric with a lustrous, glossy sheen that’s extremely soft to the touch. It’s produced from recycled waste material and wood-based fibres from responsibly managed forests with a focus on protecting ecosystems and providing social benefits for local communities.",
+        images: [
+            "assets/BestSellers/WinonaJaine/WinonaJaine1.jpg",
+            "assets/BestSellers/WinonaJaine/WinonaJaine2.jpg",
+            "assets/BestSellers/WinonaJaine/WinonaJaine3.jpg",
+            "assets/BestSellers/WinonaJaine/WinonaJaine4.jpg",
+            "assets/BestSellers/WinonaJaine/WinonaJaine5.jpg",
+            "assets/BestSellers/WinonaJaine/WinonaJaine6.jpg"],
+        quantite: 1,
+        taille: "M",
+        couleurName: "Gold",
+        couleur: "assets/BestSellers/KayeOversized/KayeOversizedColor.png",
+        categorie: "Babaton",
+        product: "Crochet Midi Dress",
+        newItem: true
     },
 ];

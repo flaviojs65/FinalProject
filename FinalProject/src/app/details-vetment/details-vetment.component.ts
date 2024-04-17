@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { vetements, Vetement } from '../vetments';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-details-vetment',
@@ -11,9 +12,12 @@ export class DetailsVetmentComponent implements OnInit {
   vetement: Vetement | undefined;
   vetements: Vetement[] = [...vetements];
 
+  constructor(private route: ActivatedRoute, private cartService: CartService) { }
 
-
-  constructor(private route: ActivatedRoute) { }
+  ajouterAuPanier(vetement: Vetement) {
+    this.cartService.ajouterAuPanier(vetement);
+    window.alert('Votre produit a été ajouté au panier!');
+  }
 
 
   ngOnInit(): void {

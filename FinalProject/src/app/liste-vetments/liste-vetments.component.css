@@ -13,14 +13,16 @@
 
 p {
     margin: 0;
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 h5 {
-    font-size: 13px;
+    font-size: 20px;
     margin-top: 10px;
-    margin-bottom: 0px;
-
+    font-weight: 200;
+    margin-bottom: 5px;
+    font-family: var(--font-primary);
 }
 
 @media (min-width: 992px) {
@@ -30,9 +32,23 @@ h5 {
 
 }
 
-.image-container button {
+.image-container .btn-new {
     background-color: #ffffff;
-    border: 1px solid #0000002d;
+    border: none;
+    color: black;
+    font-size: 0.7rem;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 1%;
+    bottom: 2%;
+    right: 2%;
+    z-index: 1;
+}
+
+.image-container .btn-details {
+    background-color: #ffffff;
+    border: none;
     color: black;
     text-align: center;
     text-decoration: none;
@@ -40,7 +56,7 @@ h5 {
     font-size: 12px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0px;
     width: 95%;
     height: 7%;
     padding: 1px 30px;
