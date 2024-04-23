@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
@@ -13,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { ListeVetmentsComponent } from './liste-vetments/liste-vetments.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
+import { ProfilComponent } from './profil/profil.component';
+import { PromotionComponent } from './promotion/promotion.component';
 import { SustainabilityComponent } from './sustainability/sustainability.component';
 
 
@@ -29,12 +32,15 @@ import { SustainabilityComponent } from './sustainability/sustainability.compone
     HomeComponent,
     DetailsVetmentComponent,
     CartComponent,
-    LoginComponent
+    LoginComponent,
+    PromotionComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()

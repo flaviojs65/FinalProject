@@ -1,3 +1,5 @@
-.home {
-    background-color: rgb(253, 251, 244);
+html,
+body {
+    margin: 0;
+    padding: 0;
 }

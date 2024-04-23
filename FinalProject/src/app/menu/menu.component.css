@@ -1,19 +1,39 @@
-/* Nav Css*/
+/* Menu Css */
+.promo {
+    margin-top: 0px;
+    padding: 3px;
+    background-color: #000000;
+    margin-bottom: -10px;
+    width: 100%;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
+/* Nav Css*/
 .navbar {
-    background-color: #ffffff;       
+    position: fixed;
+    padding: 0px;
+    top: 35px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff00;
     font-family: var(--font-primary);
+    margin-bottom: 0px;
+    display: flex;
+    z-index: 1000;
+    /* Asegura que el menú esté por encima de otros elementos */
 }
 
 .navbar-brand {
     font-family: var(--font-primary);
     font-optical-sizing: auto;
-    font-size: 2rem;
-    font-weight: 100;
-    margin-left: 30px;
-
-
+    font-size: 3rem;
+    font-weight: 300;
+    margin-left: 1%;
     padding: 0px;
+    color: white;
 }
 
 .navbar-toggler {
@@ -26,17 +46,73 @@
 }
 
 .nav-link {
-    color: #000000;
+    color: #ffffff;
     font-weight: 500;
     position: relative;
-    font-size: 20px;
+    font-size: 16px;
     font-family: var(--font);
     font-optical-sizing: auto;
+    align-items: flex-start;
+    justify-content: left;
+
 }
 
 .nav-link:hover,
 .nav-link:active {
     color: #000000;
+}
+
+/* Hover NOT menu */
+.hover-applied {
+    background-color: #fafafa;
+    margin-bottom: 2000px;
+}
+
+.is-black {
+    color: #000000;
+}
+
+.is-black-fill {
+    fill: #000000;
+}
+
+
+/* Hover menu*/
+
+.navbar:hover {
+    background-color: #ffffff;
+}
+
+.navbar:hover .navbar-brand,
+.navbar:hover .nav-link {
+    color: #000000;
+}
+
+.navbar:hover svg path {
+    fill: #000000;
+}
+
+/*  Scroll menu */
+
+.navbar.scrolled {
+    top: 0px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.navbar.scrolled svg path {
+    fill: #000000;
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+    color: #000000;
+
+}
+
+.styleNoHome {
+    color: #000000;
+    background-color: #ffffff;
 }
 
 @media (min-width :991px) {

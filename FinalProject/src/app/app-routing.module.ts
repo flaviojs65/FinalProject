@@ -5,13 +5,15 @@ import { DetailsVetmentComponent } from './details-vetment/details-vetment.compo
 import { HomeComponent } from './home/home.component';
 import { ListeVetmentsComponent } from './liste-vetments/liste-vetments.component';
 import { LoginComponent } from './login/login.component';
+import { ProfilComponent } from './profil/profil.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'collection', component: ListeVetmentsComponent },
   { path: 'detail/:id', component: DetailsVetmentComponent },
   { path: 'panier', component: CartComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'profil', component: ProfilComponent }
 ];
 
 @NgModule({

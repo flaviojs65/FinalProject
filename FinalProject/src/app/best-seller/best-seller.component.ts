@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Vetement, vetements } from '../vetments';
+import { Vetement } from '../vetments';
 
 
 
@@ -10,13 +11,21 @@ import { Vetement, vetements } from '../vetments';
 })
 export class BestSellerComponent implements OnInit {
 
-  vetements: Vetement[] = [...vetements];
+  vetements: Vetement[] = [];
   isHovering: boolean[] = [];
-  constructor() { }
-  ngOnInit(): void {
-    vetements.forEach((vetement, i) => {
-      this.isHovering[i] = false;
-    });
+
+  constructor(private http: HttpClient) {
   }
 
+  ngOnInit(): void {
+    this.loadVetements();
+  }
+
+  loadVetements() {
+    this.http.get<Vetement[]>('http://localhost:8082/api/vetements')
+      .subscribe(vetements => {
+        this.vetements = vetements;
+      });
+
+  }
 }

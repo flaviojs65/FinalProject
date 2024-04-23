@@ -1,0 +1,53 @@
+a {
+    color: black;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: 500;
+    padding: 10px;
+    margin-left: 10px;
+    border-left: 3px solid transparent;
+
+}
+
+.profil {
+    margin-top: 15%;
+
+}
+
+.bienvenu {
+    margin-bottom: 30px;
+}
+
+a:hover {
+    background-color: #988d7a57;
+    border-left: 1px solid black;
+
+}
+
+.help h6 {
+    margin-top: 150px;
+}
+
+.help p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.email {
+    margin-top: 20px;
+}
+
+.centre {
+    margin-top: 0px;
+}
+
+.centre p {
+    font-weight: 200;
+    font-size: medium;
+    color: rgba(0, 0, 0, 0.633);
+}
+
+.centre h6 {
+    margin-top: 20px;
+    font-weight: 400;
+}

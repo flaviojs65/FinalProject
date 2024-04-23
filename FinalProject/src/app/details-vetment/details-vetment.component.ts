@@ -1,7 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { vetements, Vetement } from '../vetments';
 import { CartService } from '../cart.service';
+import { Vetement } from '../vetments';
 
 @Component({
   selector: 'app-details-vetment',
@@ -10,19 +11,29 @@ import { CartService } from '../cart.service';
 })
 export class DetailsVetmentComponent implements OnInit {
   vetement: Vetement | undefined;
-  vetements: Vetement[] = [...vetements];
 
-  constructor(private route: ActivatedRoute, private cartService: CartService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private http: HttpClient,
+    private cartService: CartService
+  ) { }
 
   ajouterAuPanier(vetement: Vetement) {
     this.cartService.ajouterAuPanier(vetement);
     window.alert('Votre produit a été ajouté au panier!');
   }
 
-
   ngOnInit(): void {
+    this.loadVetement();
+  }
+
+  loadVetement() {
     const routeParams = this.route.snapshot.paramMap;
     const vetementIdFromRoute = Number(routeParams.get('id'));
-    this.vetement = vetements.find(vetement => vetement.id === vetementIdFromRoute);
+
+    this.http.get<Vetement>(`http://localhost:8082/api/vetements/${vetementIdFromRoute}`)
+      .subscribe(vetement => {
+        this.vetement = vetement;
+      });
   }
 }
