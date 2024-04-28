@@ -1,7 +1,11 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { AccountDashboardComponent } from './ProfilComponents/account-dashboard/account-dashboard.component';
+import { DetailsComponent } from './ProfilComponents/details/details.component';
+import { OrderHistoryComponent } from './ProfilComponents/order-history/order-history.component';
+import { PasswordComponent } from './ProfilComponents/password/password.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BestSellerComponent } from './best-seller/best-seller.component';
@@ -16,7 +20,11 @@ import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProfilComponent } from './profil/profil.component';
 import { PromotionComponent } from './promotion/promotion.component';
+import { RechercheComponent } from './recherche/recherche.component';
+import { RegisterComponent } from './register/register.component';
 import { SustainabilityComponent } from './sustainability/sustainability.component';
+
+
 
 
 @NgModule({
@@ -34,13 +42,20 @@ import { SustainabilityComponent } from './sustainability/sustainability.compone
     CartComponent,
     LoginComponent,
     PromotionComponent,
-    ProfilComponent
+    ProfilComponent,
+    AccountDashboardComponent,
+    DetailsComponent,
+    PasswordComponent,
+    OrderHistoryComponent,
+    RechercheComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()

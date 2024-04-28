@@ -8,12 +8,17 @@ import { Component, HostListener, Input } from '@angular/core';
 export class MenuComponent {
 
   isScrolled: boolean = false;
+  isChercher: boolean = false;
 
   @Input() isHome: boolean = false;
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const yOffset = window.pageYOffset;
     this.isScrolled = yOffset > 70;
+  }
+
+  toggleChercher(): void {
+    this.isChercher = !this.isChercher;
   }
 
 }

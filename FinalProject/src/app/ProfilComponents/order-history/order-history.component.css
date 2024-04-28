@@ -1,0 +1,28 @@
+.order-section {
+    margin-left: 10%;
+
+}
+
+.btns {
+    margin: 30px 0px;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-family: var(--font-primary);
+}
+
+.btn-primary {
+    margin: 0px 30px 0px 0px;
+    width: 200px;
+    background-color: #000000;
+    color: white;
+    border: 1px black solid;
+    padding: 8px 0px;
+}
+
+
+.btn-primary:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}

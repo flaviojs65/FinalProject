@@ -6,16 +6,18 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="bienvenu">
-                    <h2>Hello , Utilisateur</h2>
+                    <h4>Hello , Utilisateur</h4>
                     <p>Sing out</p>
                 </div>
                 <div class="list-group">
-                    <a href="#" class="">ACCOUNT OVERVIEW</a>
-                    <a href="#" class="">PROFILE DETAILS</a>
-                    <a href="#" class="">CHANGE PASSWORD</a>
-                    <a href="#" class="">ORDER HISTORY</a>
-                    <a href="#" class="">ADDRESS BOOK</a>
-                    <a href="#" class="">WISH LIST</a>
+                    <a [class.active]="currentComponentName === 'overview'" (click)="showComponent('overview')">ACCOUNT
+                        OVERVIEW</a>
+                    <a [class.active]="currentComponentName === 'details'" (click)="showComponent('details')">PROFILE
+                        DETAILS</a>
+                    <a [class.active]="currentComponentName === 'password'" (click)="showComponent('password')">CHANGE
+                        PASSWORD</a>
+                    <a [class.active]="currentComponentName === 'history'" (click)="showComponent('history')">ORDER
+                        HISTORY</a>
                 </div>
                 <div class="help">
                     <h6>NEED HELP?</h6>
@@ -35,7 +37,9 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <!-- Aquí puedes insertar tus componentes según la selección -->
+                <div *ngIf="currentComponent">
+                    <ng-container [ngComponentOutlet]="currentComponent"></ng-container>
+                </div>
             </div>
         </div>
     </div>
