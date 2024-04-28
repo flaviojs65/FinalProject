@@ -4,7 +4,11 @@
 
 .container-fluid {
     max-width: 99%;
-    /* Adjust this value to change the maximum width of the container */
+
+}
+
+.chercher {
+    margin-left: 100px;
 }
 
 .image-container {
@@ -76,13 +80,13 @@ h5 {
 
 .btn-new {
     transition: bottom 0.3s ease;
-    /* Transición suave para cambios de posición */
+
 }
 
 
 @media (min-width: 900px) {
     .btn-new {
         bottom: 10%;
-        /* Ajuste para pantallas grandes */
+
     }
 }

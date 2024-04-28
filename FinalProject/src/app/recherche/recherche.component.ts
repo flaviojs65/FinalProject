@@ -19,7 +19,7 @@ export class RechercheComponent {
   constructor(private vetementService: VetementService) { }
 
   search(): void {
-    if (this.searchTerm.length > 2) {  // Trigger search for terms longer than 2 characters.
+    if (this.searchTerm.length > 2) {
       this.vetementService.rechercherVetement(this.searchTerm).subscribe({
         next: (vetements) => {
           this.vetements = vetements;

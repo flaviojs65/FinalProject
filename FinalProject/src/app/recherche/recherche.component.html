@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <section class="chercher">
     <div>
-        <input type="text" [(ngModel)]="searchTerm" (keyup)="search()" placeholder="Search vetements...">
+        <input class="lupa" type="text" [(ngModel)]="searchTerm" (keyup)="search()" placeholder="Search vetements...">
         <div class="outer-container mx-0 " style="margin-top: 100px;">
             <div class="container-fluid mx-auto">
                 <div class="row">
@@ -16,7 +16,7 @@
                             <img style="display: none" (load)="imageLoaded[i] = true" [src]="currentImage[i]">
 
                             <button class="btn-details" [ngStyle]="{'display': isHovering[i] ? 'block' : 'none'}"
-                                style="margin-bottom: 11%; border: 0.1px solid rgba(0, 0, 0, 0.23);">Details</button>
+                                style="margin-bottom: 16%; border: 0.1px solid rgba(0, 0, 0, 0.23);">Details</button>
                             <div class="image-text" *ngIf="imageLoaded[i]">
                                 <h5>{{vetement.nom}}</h5>
                                 <p>${{vetement.prix}}</p>
