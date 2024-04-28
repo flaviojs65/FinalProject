@@ -20,13 +20,15 @@ import { ReturnsComponent } from './returns/returns.component';
 import { ServicesComponent } from './services/services.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { VetementNewComponent } from './vetement-new/vetement-new.component';
+import { AchatComponent } from "./achat/achat.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'collection', component: ListeVetmentsComponent },
+  { path: 'achat', component: AchatComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'detail/:id', component: DetailsVetmentComponent },
   { path: 'panier', component: CartComponent },
-  { path: 'login', component: LoginComponent },
   { path: 'profil', component: ProfilComponent, canActivate: [AuthGuard] },
   { path: 'rechercher', component: RechercheComponent },
   { path: 'register', component: RegisterComponent },

@@ -33,9 +33,6 @@ import { FaqComponent } from './faq/faq.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { ReturnsComponent } from './returns/returns.component';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,

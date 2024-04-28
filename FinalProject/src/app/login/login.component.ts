@@ -5,7 +5,7 @@ import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 
 export class LoginComponent {
@@ -18,8 +18,7 @@ export class LoginComponent {
     if (form.valid) {
       this.authService.login(this.username, this.password).subscribe({
         next: (response) => {
-
-          this.router.navigate(['/profil']);
+          this.router.navigate(['/profile']); // Note: ensure the route is correctly spelled as '/profile'
         },
         error: (err) => {
           console.error('Login failed', err);
@@ -39,5 +38,4 @@ export class LoginComponent {
       }
     });
   }
-
 }
