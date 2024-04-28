@@ -1,20 +1,41 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent {
-  userData = {
-    nomUtilisateur: '',
-    motDePasse: ''
-  };
+  username: string = '';
+  password: string = '';
 
-  constructor() { }
+  constructor(private authService: AuthService, private router: Router) { }
 
-  submitForm() {
+  onSubmit(form: any) {
+    if (form.valid) {
+      this.authService.login(this.username, this.password).subscribe({
+        next: (response) => {
+          this.router.navigate(['/profile']); // Note: ensure the route is correctly spelled as '/profile'
+        },
+        error: (err) => {
+          console.error('Login failed', err);
+        }
+      });
+    }
+  }
 
-    // console.log('Données du formulaire:', this.userData);
+  logout() {
+    this.authService.logout().subscribe({
+      next: () => {
+        console.log('Logout successful');
+        this.authService.clearLoggedInUser();
+      },
+      error: (err) => {
+        console.error('Logout failed', err);
+      }
+    });
   }
 }

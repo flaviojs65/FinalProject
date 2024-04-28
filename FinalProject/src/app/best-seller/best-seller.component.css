@@ -9,12 +9,17 @@
 .img-sustainability {
     margin-top: 10%;
     width: 100%;
-    height: 450px;
 
 }
 
 .img-sellers {
     margin-top: 20%;
+    width: 800px;
+}
 
-    width: 250px;
+h2 {
+    font-family: var(--font-primary);
+    margin-left: 6%;
+    font-size: 2.7rem;
+    transform: translateY(90px);
 }

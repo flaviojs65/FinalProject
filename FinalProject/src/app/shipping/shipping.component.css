@@ -1,0 +1,35 @@
+.shipping {
+    margin-top: 150px;
+}
+
+.shipping-heading {
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 50px;
+
+    font-family: var(--font-primary);
+}
+
+.info-card {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h5 {
+    margin-top: 15px;
+    color: #333;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        padding: 15px;
+    }
+}

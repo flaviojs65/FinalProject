@@ -1,26 +1,38 @@
-/* Nav Css*/
-.login-button {
-    background-color: #b29b8300;
-    color: #B29B83;
-    font-size: 25px;
-    font-weight: 200;
-    padding: 8px 20px;
-    text-decoration: none;
-    border-radius: 20px;
+/* Menu Css */
+.promo {
+    margin-top: 0px;
+    padding: 3px;
+    background-color: #000000;
+    margin-bottom: -10px;
+    width: 100%;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
+/* Nav Css*/
 .navbar {
-    background-color: #ffffff;
-    padding: 1rem 0;
-
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(239, 239, 239, 0.1);
+    position: fixed;
+    padding: 0px;
+    top: 35px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff00;
+    font-family: var(--font-primary);
+    margin-bottom: 0px;
+    display: flex;
+    z-index: 1000;
 }
 
 .navbar-brand {
-    color: #000000;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-family: var(--font-primary);
+    font-optical-sizing: auto;
+    font-size: 3rem;
+    font-weight: 300;
+    margin-left: 1%;
+    padding: 0px;
+    color: white;
 }
 
 .navbar-toggler {
@@ -33,15 +45,73 @@
 }
 
 .nav-link {
-    color: #000000;
+    color: #ffffff;
     font-weight: 500;
     position: relative;
-    font-size: large;
+    font-size: 16px;
+    font-family: var(--font);
+    font-optical-sizing: auto;
+    align-items: flex-start;
+    justify-content: left;
+
 }
 
 .nav-link:hover,
 .nav-link:active {
     color: #000000;
+}
+
+/* Hover NOT menu */
+.hover-applied {
+    background-color: #fafafa;
+    margin-bottom: 2000px;
+}
+
+.is-black {
+    color: #000000;
+}
+
+.is-black-fill {
+    fill: #000000;
+}
+
+
+/* Hover menu*/
+
+.navbar:hover {
+    background-color: #ffffff;
+}
+
+.navbar:hover .navbar-brand,
+.navbar:hover .nav-link {
+    color: #000000;
+}
+
+.navbar:hover svg path {
+    fill: #000000;
+}
+
+/*  Scroll menu */
+
+.navbar.scrolled {
+    top: 0px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.navbar.scrolled svg path {
+    fill: #000000;
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+    color: #000000;
+
+}
+
+.styleNoHome {
+    color: #000000;
+    background-color: #ffffff;
 }
 
 @media (min-width :991px) {
@@ -63,4 +133,18 @@
         visibility: visible;
         width: 100%;
     }
+}
+
+/* icons */
+
+.icons {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.icons li {
+    margin: 0 15px;
 }

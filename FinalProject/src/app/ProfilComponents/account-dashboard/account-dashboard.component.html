@@ -1,0 +1,30 @@
+<section class="overview">
+    <h2>Account Dashboard</h2>
+    <div>
+        <h5>My details</h5>
+        <p>{{ authService.currentUserValue?.username }} </p>
+        <p>Utilisateur Email </p>
+        <div class="btns">
+            <button [routerLink]="['/details']" class="btn-primary">EDIT
+                DETAILS</button>
+            <button class="btn-secondary">CHANGE PASSWORD</button>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div>
+        <h5>My Orders</h5>
+        <p>you have no recent Orders</p>
+        <div class="btns">
+            <button class="btn-secondary">START SHOPPING</button>
+        </div>
+    </div>
+    <div class="line"></div>
+
+    <div>
+        <h5>Cart </h5>
+        <p>View Cart </p>
+        <div class="btns">
+            <button class="btn-secondary">CART DETAILS</button>
+        </div>
+    </div>
+</section>

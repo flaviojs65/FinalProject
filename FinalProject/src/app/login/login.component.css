@@ -1,0 +1,27 @@
+.login {
+    margin-top: 150px;
+}
+
+
+.btn-secondary {
+    width: 100%;
+    background-color: #ffffff;
+    color: black;
+    border: 1px black solid;
+    padding: 8px 0px;
+}
+
+
+.btn-secondary:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.account {
+    margin-top: 30px;
+    display: inline-block;
+    margin-left: 80%;
+    text-decoration: underline;
+    color: #000000;
+    cursor: pointer;
+}

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Vetement, vetements } from '../vetments';
+import { HttpClient } from '@angular/common/http';
+import { Component, Input, OnInit } from '@angular/core';
+import { Vetement } from '../vetments';
+
 
 @Component({
   selector: 'app-liste-vetments',
@@ -10,21 +12,51 @@ import { Vetement, vetements } from '../vetments';
 
 export class ListeVetmentsComponent implements OnInit {
 
-  isHovering: boolean[] = [];
-  vetements: Vetement[] = [...vetements];
+  @Input() Showfooter: boolean = true;
+  @Input() bestSellers: boolean = true;
+  @Input() ShowMenu: boolean = true;
+  @Input() ShowHeader: boolean = true;
+
+  vetements: Vetement[] = [];
+
   currentImage: string[] = [];
   imageLoaded: boolean[] = [];
+  isHovering: boolean[] = [];
 
+
+  NeuxVetements: Vetement[] = [];
+
+  currentImageNeuxVetements: string[] = [];
+  isHoveringNeuxVetements: boolean[] = [];
+  imageLoadedNeuxVetements: boolean[] = [];
+
+
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    vetements.forEach((vetement, i) => {
-      this.currentImage[i] = vetement.images[0];
-      this.isHovering[i] = false;
-      this.imageLoaded[i] = false;
+    this.loadVetements();
+  }
 
-    }
-    );
+  loadVetements() {
+    this.http.get<Vetement[]>('http://localhost:8082/api/vetements')
+      .subscribe(vetements => {
+        this.vetements = vetements;
+        this.vetements.forEach((vetement, i) => {
+          this.currentImage[i] = vetement.images[0];
+          this.isHovering[i] = false;
+          this.imageLoaded[i] = false;
+          console.log(vetements[i]);
+          if (vetement.newItem) {
+            this.NeuxVetements.push(vetement);
+            this.currentImageNeuxVetements.push(vetement.images[0]);
+            this.isHoveringNeuxVetements.push(false);
+            this.imageLoadedNeuxVetements.push(false);
+          }
+        });
+      });
+
   }
 
 
-} 
+}

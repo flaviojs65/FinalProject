@@ -32,7 +32,10 @@
                     <option>XL</option>
                 </select>
             </div>
-            <button class="btn ">Add to Cart</button>
+            <div *ngIf="vetement">
+                <button class="btn" (click)="ajouterAuPanier(vetement)">Add to Cart</button>
+            </div>
+
             <h2>Always makes the cut </h2>
             <p class="description">
                 {{vetement?.description}}

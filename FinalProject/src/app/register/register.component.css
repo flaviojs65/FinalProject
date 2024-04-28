@@ -1,0 +1,68 @@
+.register {
+    margin-left: 10%;
+    font-family: var(--font-primary);
+    margin-top: 180px;
+}
+
+.register h2 {
+    margin-bottom: 30px;
+
+}
+
+.register form {
+    width: 50%;
+    max-width: 600px;
+}
+
+.register .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.register label {
+    display: block;
+    margin-bottom: 5px;
+    color: #757272;
+    font-size: 15px;
+}
+
+.register input[type="text"],
+.register input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #757272;
+    border-radius: 4px;
+    font-size: 14px;
+
+}
+
+.register button[type="submit"] {
+    background-color: #000000;
+    color: white;
+    border: 1px solid black;
+    padding: 8px 15px;
+    margin-top: 20px;
+    width: auto;
+    cursor: pointer;
+}
+
+.register button[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .register {
+        margin-left: 5%;
+        /* Less margin on smaller screens */
+        width: 90%;
+        /* Wider form on smaller screens */
+    }
+
+    .register form {
+        width: 100%;
+        /* Full width form on smaller screens */
+    }
+}

@@ -1,37 +1,37 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">Login Page</a>
-  </div>
-</nav>
+<app-menu></app-menu>
+<section class="login">
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <form class="p-4 shadow" (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+          <h2 class="mb-4 text-center">Login</h2>
 
-<div class="container login mt-5">
-  <div class="row">
-    <div class="col-lg-6">
-      <div class="text-center">
-        <img src="assets/Login/imageLogin.webp" class="img-fluid" alt="Image">
+          <!-- Username -->
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Username" name="username" [(ngModel)]="username"
+              #usernameModel="ngModel" required>
+            <div *ngIf="usernameModel.errors?.['required'] && (usernameModel.dirty || usernameModel.touched)"
+              class="alert alert-danger mt-2">
+              Username is required.
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="password"
+              #passwordModel="ngModel" required>
+            <div *ngIf="passwordModel.errors?.['required'] && (passwordModel.dirty || passwordModel.touched)"
+              class="alert alert-danger mt-2">
+              Password is required.
+            </div>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn-secondary" [disabled]="loginForm.invalid">Log in</button>
+          <a [routerLink]="['/register']" class="account">Create Account</a>
+        </form>
       </div>
     </div>
-    <div class="col-lg-6">
-      <form class="login-form p-4" id="signupForm" (ngSubmit)="submitForm()" #loginForm="ngForm">
-        <h2 class="mb-4 text-center">Connexion</h2>
-        <div class="mb-3 form-group">
-          <input type="text" class="form-control" placeholder="Nom d'utilisateur" name="nomUtilisateur"
-                 id="nomUtilisateur" [(ngModel)]="userData.nomUtilisateur" required #nomUtilisateur="ngModel">
-          <div *ngIf="nomUtilisateur.invalid && (nomUtilisateur.dirty || nomUtilisateur.touched)"
-               class="text-danger">
-            <div *ngIf="nomUtilisateur.errors?.['required']">Le nom d'utilisateur est requis.</div>
-          </div>
-        </div>
-        <div class="mb-3 form-group">
-          <input type="password" class="form-control" placeholder="Mot de passe" name="motDePasse"
-                 id="motDePasse" [(ngModel)]="userData.motDePasse" required #motDePasse="ngModel">
-          <div *ngIf="motDePasse.invalid && (motDePasse.dirty || motDePasse.touched)"
-               class="text-danger">
-            <div *ngIf="motDePasse.errors?.['required']">Le mot de passe est requis.</div>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block" [disabled]="loginForm.invalid">Se connecter</button>
-      </form>
-    </div>
   </div>
-</div>
+</section>
+<app-footer></app-footer>

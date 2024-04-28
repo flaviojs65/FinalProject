@@ -1,0 +1,32 @@
+<app-menu></app-menu>
+<section class="chercher">
+    <div>
+        <input class="lupa" type="text" [(ngModel)]="searchTerm" (keyup)="search()" placeholder="Search vetements...">
+        <div class="outer-container mx-0 " style="margin-top: 100px;">
+            <div class="container-fluid mx-auto">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-3 p-0" *ngFor="let vetement of vetements ,let i = index ">
+                        <div class="image-container"
+                            (mouseover)="currentImage[i]=vetement.images[vetement.images.length - 1]; isHovering[i]=true"
+                            (mouseout)="currentImage[i]=vetement.images[0]; isHovering[i]=false"
+                            style="cursor: pointer; position: relative;" [routerLink]="['/detail', vetement.id]">
+
+                            <img *ngIf="currentImage[i]" [src]="currentImage[i]" class="img-fluid w-100 h-100">
+
+                            <img style="display: none" (load)="imageLoaded[i] = true" [src]="currentImage[i]">
+
+                            <button class="btn-details" [ngStyle]="{'display': isHovering[i] ? 'block' : 'none'}"
+                                style="margin-bottom: 16%; border: 0.1px solid rgba(0, 0, 0, 0.23);">Details</button>
+                            <div class="image-text" *ngIf="imageLoaded[i]">
+                                <h5>{{vetement.nom}}</h5>
+                                <p>${{vetement.prix}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p *ngIf="vetements.length === 0">No vetements found.</p>
+    </div>
+</section>
+<app-footer></app-footer>
