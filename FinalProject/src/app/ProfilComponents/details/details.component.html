@@ -1,41 +1,47 @@
 <section class="details-sections">
     <h2>Your Details</h2>
-    <div class="details">
-        <div class="form__group field">
-            <input type="text" class="form__field" placeholder="First Name" name="firstName" required="">
-            <label for="firstName" class="form__label">First Name</label>
+    <form (ngSubmit)="saveUser()">
+        <div class="details">
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="First Name" name="firstName" required=""
+                    [(ngModel)]="user.firstName">
+                <label for="firstName" class="form__label">First Name</label>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Last Name" name="lastName" required=""
+                    [(ngModel)]="user.lastName">
+                <label for="lastName" class="form__label">Last Name</label>
+            </div>
+            <div class="form__group field">
+                <input type="email" class="form__field" placeholder="Email" name="email" required="">
+                <label for="email" class="form__label">Email</label>
+            </div>
+            <div class="btns">
+                <button type="submit" class="btn-primary">SAVE</button>
+                <button type="button" class="btn-secondary">CANCEL</button>
+            </div>
         </div>
-        <div class="form__group field">
-            <input type="text" class="form__field" placeholder="Last Name" name="lastName" required="">
-            <label for="lastName" class="form__label">Last Name</label>
+        <div class=" line">
         </div>
-        <div class="form__group field">
-            <input type="email" class="form__field" placeholder="Email" name="email" required="">
-            <label for="email" class="form__label">Email</label>
+        <div class="address">
+            <h2>Address Book</h2>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Address" name="address" required="">
+                <label for="address" class="form__label">Address</label>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="City" name="city" required="">
+                <label for="city" class="form__label">City</label>
+            </div>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Country" name="country" required="">
+                <label for="country" class="form__label">Country</label>
+            </div>
+            <div class="btns">
+                <button class="btn-primary">SAVE</button>
+                <button class="btn-secondary">CANCEL</button>
+            </div>
         </div>
-        <div class="btns">
-            <button class="btn-primary">SAVE</button>
-            <button class="btn-secondary">CANCEL</button>
-        </div>
-    </div>
-    <div class="line"></div>
-    <div class="address">
-        <h2>Address Book</h2>
-        <div class="form__group field">
-            <input type="text" class="form__field" placeholder="Address" name="address" required="">
-            <label for="address" class="form__label">Address</label>
-        </div>
-        <div class="form__group field">
-            <input type="text" class="form__field" placeholder="City" name="city" required="">
-            <label for="city" class="form__label">City</label>
-        </div>
-        <div class="form__group field">
-            <input type="text" class="form__field" placeholder="Country" name="country" required="">
-            <label for="country" class="form__label">Country</label>
-        </div>
-        <div class="btns">
-            <button class="btn-primary">SAVE</button>
-            <button class="btn-secondary">CANCEL</button>
-        </div>
-    </div>
+    </form>
+
 </section>

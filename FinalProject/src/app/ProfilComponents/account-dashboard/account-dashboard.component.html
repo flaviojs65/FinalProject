@@ -2,10 +2,11 @@
     <h2>Account Dashboard</h2>
     <div>
         <h5>My details</h5>
-        <p>Utilisateur</p>
+        <p>{{ authService.currentUserValue?.username }} </p>
         <p>Utilisateur Email </p>
         <div class="btns">
-            <button class="btn-primary">EDIT DETAILS</button>
+            <button [routerLink]="['/details']" class="btn-primary">EDIT
+                DETAILS</button>
             <button class="btn-secondary">CHANGE PASSWORD</button>
         </div>
     </div>

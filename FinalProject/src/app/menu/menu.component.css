@@ -23,7 +23,6 @@
     margin-bottom: 0px;
     display: flex;
     z-index: 1000;
-    /* Asegura que el menú esté por encima de otros elementos */
 }
 
 .navbar-brand {

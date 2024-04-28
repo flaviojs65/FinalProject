@@ -23,6 +23,15 @@ import { PromotionComponent } from './promotion/promotion.component';
 import { RechercheComponent } from './recherche/recherche.component';
 import { RegisterComponent } from './register/register.component';
 import { SustainabilityComponent } from './sustainability/sustainability.component';
+import { VetementNewComponent } from './vetement-new/vetement-new.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { ServicesComponent } from './services/services.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { AffiliateComponent } from './affiliate/affiliate.component';
+import { FaqComponent } from './faq/faq.component';
+import { ShippingComponent } from './shipping/shipping.component';
+import { ReturnsComponent } from './returns/returns.component';
 
 
 
@@ -48,7 +57,16 @@ import { SustainabilityComponent } from './sustainability/sustainability.compone
     PasswordComponent,
     OrderHistoryComponent,
     RechercheComponent,
-    RegisterComponent
+    RegisterComponent,
+    VetementNewComponent,
+    AboutComponent,
+    ContactComponent,
+    ServicesComponent,
+    PrivacyComponent,
+    AffiliateComponent,
+    FaqComponent,
+    ShippingComponent,
+    ReturnsComponent
   ],
   imports: [
     BrowserModule,

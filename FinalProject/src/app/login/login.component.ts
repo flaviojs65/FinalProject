@@ -12,17 +12,14 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
 
-
   constructor(private authService: AuthService, private router: Router) { }
 
   onSubmit(form: any) {
     if (form.valid) {
       this.authService.login(this.username, this.password).subscribe({
-        next: (res) => {
-          alert('Login successful');
-          this.authService.setLoggedInUser(this.username);
-          this.router.navigate(['/profil']); // Adjust as per your routing setup
+        next: (response) => {
 
+          this.router.navigate(['/profil']);
         },
         error: (err) => {
           console.error('Login failed', err);
@@ -36,7 +33,6 @@ export class LoginComponent {
       next: () => {
         console.log('Logout successful');
         this.authService.clearLoggedInUser();
-        // Redirigir al usuario al inicio o a otra página
       },
       error: (err) => {
         console.error('Logout failed', err);

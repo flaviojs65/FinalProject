@@ -1,0 +1,36 @@
+.returns {
+    margin-top: 150px;
+}
+
+.returns-heading {
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 50px;
+    font-family: var(--font-primary);
+}
+
+.info-card {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.info-card h5 {
+    margin-top: 15px;
+    color: #333333;
+    font-family: var(--font-primary);
+
+}
+
+.info-card p {
+    font-size: 14px;
+    color: #555555;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        padding: 15px;
+    }
+}

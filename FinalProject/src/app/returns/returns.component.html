@@ -1,0 +1,16 @@
+<app-menu></app-menu>
+<section class="returns">
+    <div class="container mt-5">
+        <h2 class="returns-heading text-center">Returns Policy</h2>
+        <div class="row">
+            <div *ngFor="let info of returnsInfos" class="col-md-4 text-center mb-4">
+                <div class="info-card">
+                    <i class="{{ info.icon }}" style="font-size: 48px; color: #c5a480;"></i>
+                    <h5 class="mt-3">{{ info.question }}</h5>
+                    <p>{{ info.answer }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

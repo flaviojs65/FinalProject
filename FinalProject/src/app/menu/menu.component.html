@@ -18,14 +18,13 @@
                                 [ngClass]="{ 'is-black': !isHome }">COLLECTION</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#" [ngClass]="{ 'is-black': !isHome }">NEW IN</a>
+                            <a class="nav-link mx-lg-2" href="#" [routerLink]="['/new']"
+                                [ngClass]="{ 'is-black': !isHome }">NEW IN</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#" [ngClass]="{ 'is-black': !isHome }">SUSTAINABILITY</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#" [routerLink]="['/register']"
-                                [ngClass]="{'is-black': !isHome}">Sign In</a>
+                            <a class="nav-link mx-lg-2" href="#" [routerLink]="['/login']"
+                                [ngClass]="{'is-black': !isHome}">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -77,7 +76,7 @@
                         </svg>
                     </a>
                 </li>
-                y
+
             </ul>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">

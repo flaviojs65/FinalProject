@@ -6,8 +6,8 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="bienvenu">
-                    <h4>Hello , Utilisateur</h4>
-                    <p>Sing out</p>
+                    <h4>Hello, {{ authService.currentUserValue?.username }}</h4>
+                    <a (click)="logout()" class="logout">Log out</a>
                 </div>
                 <div class="list-group">
                     <a [class.active]="currentComponentName === 'overview'" (click)="showComponent('overview')">ACCOUNT

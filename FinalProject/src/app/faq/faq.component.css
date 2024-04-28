@@ -1,0 +1,33 @@
+.faq {
+    margin-top: 150px;
+}
+
+.container {
+    margin-top: 120px;
+}
+
+
+.faq-heading {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 20px;
+    font-family: var(--font-primary);
+}
+
+.card {
+    border: none;
+}
+
+.card-header h5 {
+    cursor: pointer;
+    border: none;
+    font-family: var(--font-primary);
+
+}
+
+.card-body p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+
+}

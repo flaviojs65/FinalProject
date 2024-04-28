@@ -1,0 +1,63 @@
+/* Affiliate Program Section Styling */
+.affiliate-container {
+    margin-top: 150px;
+    background-color: #fff;
+    color: #333;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    font-family: var(--font-primary);
+
+}
+
+.affiliate {
+    margin-top: 150px;
+}
+
+.affiliate-heading {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: var(--font-primary);
+}
+
+.affiliate-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify;
+
+}
+
+
+.btn {
+    padding: 8px 0px;
+    width: 150px;
+    background-color: #ffffff;
+    color: black;
+    border: 1px black solid;
+}
+
+
+.btn:hover {
+    background-color: #000000;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .affiliate-container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .affiliate-heading {
+        font-size: 20px;
+    }
+
+    .affiliate-description {
+        font-size: 14px;
+    }
+}

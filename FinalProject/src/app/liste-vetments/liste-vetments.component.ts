@@ -15,6 +15,7 @@ export class ListeVetmentsComponent implements OnInit {
   @Input() Showfooter: boolean = true;
   @Input() bestSellers: boolean = true;
   @Input() ShowMenu: boolean = true;
+  @Input() ShowHeader: boolean = true;
 
   vetements: Vetement[] = [];
 

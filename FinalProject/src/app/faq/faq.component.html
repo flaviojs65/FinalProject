@@ -1,0 +1,17 @@
+<app-menu></app-menu>
+<section class="faq">
+    <div class="container mt-5 ">
+        <h2 class="faq-heading text-center">Frequently Asked Questions</h2>
+        <div *ngFor="let faq of faqs" class="card mb-3">
+            <div class=" p-0" role="button" (click)="toggleFAQ(faq)">
+                <h5 class="mb-0 py-3 px-4">{{ faq.question }}</h5>
+            </div>
+            <div class="collapse" [class.show]="faq.isActive">
+                <div class="card-body">
+                    <p>{{ faq.answer }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

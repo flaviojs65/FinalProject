@@ -23,7 +23,7 @@ h4 {
     margin-bottom: 30px;
 }
 
-a:hover {
+.list-group a:hover {
     background-color: #988d7a38;
     border-left: 1px solid black;
 
@@ -65,4 +65,8 @@ a:hover {
 .centre h6 {
     margin-top: 20px;
     font-weight: 400;
+}
+
+.logout {
+    cursor: pointer;
 }

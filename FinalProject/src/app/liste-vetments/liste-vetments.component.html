@@ -1,62 +1,66 @@
 <app-menu *ngIf="ShowMenu"></app-menu>
-<div *ngIf="!bestSellers">
-    <div class="outer-container mx-0 " style="margin-top: 100px;">
-        <div class="container-fluid mx-auto">
-            <div class="row">
-                <div class="col-6 col-sm-6 col-md-3 p-0" *ngFor="let vetement of NeuxVetements ,let i = index ">
-                    <div class="image-container" (mouseover)="currentImageNeuxVetements[i]=vetement.images[vetement.images.length - 1];
+<section class="list">
+
+    <div *ngIf="!bestSellers">
+        <h2 *ngIf="ShowHeader">Fresh Finds: Discover Our Latest Arrivals</h2>
+        <div class="outer-container mx-0 " style="margin-top: 100px;">
+            <div class="container-fluid mx-auto">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-3 p-0" *ngFor="let vetement of NeuxVetements ,let i = index ">
+                        <div class="image-container" (mouseover)="currentImageNeuxVetements[i]=vetement.images[vetement.images.length - 1];
                          isHoveringNeuxVetements[i]=true" (mouseout)="currentImageNeuxVetements[i]=vetement.images[0]; 
                          isHoveringNeuxVetements[i]=false" style="cursor: pointer; position: relative; "
-                        [routerLink]="['/detail', vetement.id]">
-                        <img *ngIf=" currentImageNeuxVetements[i]" [src]="currentImageNeuxVetements[i]"
-                            class="img-fluid h-100">
-                        <img style="display: none" (load)="imageLoadedNeuxVetements[i] = true"
-                            [src]="currentImageNeuxVetements[i]">
-                        <button class="btn-new"
-                            [ngStyle]="{bottom: isHoveringNeuxVetements[i] ? '22%' : '15%'}">NEW</button>
-                        <button class="btn-details"
-                            [ngStyle]="{'display': isHoveringNeuxVetements[i] ? 'block' : 'none'}"
-                            style="margin-bottom: 35px;">Details</button>
-                        <div class="image-text" *ngIf="imageLoadedNeuxVetements[i]">
-                            <h5>{{vetement.nom}}</h5>
-                            <p>CA${{vetement.prix}}.00</p>
+                            [routerLink]="['/detail', vetement.id]">
+                            <img *ngIf=" currentImageNeuxVetements[i]" [src]="currentImageNeuxVetements[i]"
+                                class="img-fluid h-100">
+                            <img style="display: none" (load)="imageLoadedNeuxVetements[i] = true"
+                                [src]="currentImageNeuxVetements[i]">
+                            <button class="btn-new"
+                                [ngStyle]="{bottom: isHoveringNeuxVetements[i] ? '22%' : '15%'}">NEW</button>
+                            <button class="btn-details"
+                                [ngStyle]="{'display': isHoveringNeuxVetements[i] ? 'block' : 'none'}"
+                                style="margin-bottom: 35px;">Details</button>
+                            <div class="image-text" *ngIf="imageLoadedNeuxVetements[i]">
+                                <h5>{{vetement.nom}}</h5>
+                                <p>CA${{vetement.prix}}.00</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
-<div *ngIf="bestSellers">
-    <div class="outer-container mx-0 " style="margin-top: 100px;">
-        <div class="container-fluid mx-auto">
-            <div class="row">
-                <div class="col-6 col-sm-6 col-md-3 p-0" *ngFor="let vetement of vetements ,let i = index ">
-                    <div class="image-container"
-                        (mouseover)="currentImage[i]=vetement.images[vetement.images.length - 1]; isHovering[i]=true"
-                        (mouseout)="currentImage[i]=vetement.images[0]; isHovering[i]=false"
-                        style="cursor: pointer; position: relative;" [routerLink]="['/detail', vetement.id]">
+    <div *ngIf="bestSellers">
+        <h2 *ngIf="ShowHeader"> Discover Elegance: Shop Our Exclusive Dress Collection</h2>
+        <div class="outer-container mx-0 " style="margin-top: 100px;">
+            <div class="container-fluid mx-auto">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-3 p-0" *ngFor="let vetement of vetements ,let i = index ">
+                        <div class="image-container"
+                            (mouseover)="currentImage[i]=vetement.images[vetement.images.length - 1]; isHovering[i]=true"
+                            (mouseout)="currentImage[i]=vetement.images[0]; isHovering[i]=false"
+                            style="cursor: pointer; position: relative;" [routerLink]="['/detail', vetement.id]">
 
-                        <img *ngIf="currentImage[i]" [src]="currentImage[i]" class="img-fluid w-100 h-100">
+                            <img *ngIf="currentImage[i]" [src]="currentImage[i]" class="img-fluid w-100 h-100">
 
-                        <img style="display: none" (load)="imageLoaded[i] = true" [src]="currentImage[i]">
+                            <img style="display: none" (load)="imageLoaded[i] = true" [src]="currentImage[i]">
 
-                        <button class="btn-details" [ngStyle]="{'display': isHovering[i] ? 'block' : 'none'}"
-                            style="margin-bottom: 11%; border: 0.1px solid rgba(0, 0, 0, 0.23);">Details</button>
-                        <div class="image-text" *ngIf="imageLoaded[i]">
-                            <h5>{{vetement.nom}}</h5>
-                            <p>${{vetement.prix}}</p>
+                            <button class="btn-details" [ngStyle]="{'display': isHovering[i] ? 'block' : 'none'}"
+                                style="margin-bottom: 11%; border: 0.1px solid rgba(0, 0, 0, 0.23);">Details</button>
+                            <div class="image-text" *ngIf="imageLoaded[i]">
+                                <h5>{{vetement.nom}}</h5>
+                                <p>${{vetement.prix}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div>
-
-    <app-footer *ngIf="Showfooter"></app-footer>
-</div>
+    <div>
+        <app-footer *ngIf="Showfooter"></app-footer>
+    </div>
+</section>

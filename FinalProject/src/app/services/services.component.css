@@ -1,0 +1,42 @@
+.service {
+    margin-top: 150px;
+}
+
+.container {
+    background-color: #fff;
+    /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    /* Light shadow for depth */
+}
+
+h2 {
+    color: #333;
+
+    /* Dark grey for headings */
+}
+
+.text {
+    margin-top: 50px;
+}
+
+
+h3 {
+    color: #555;
+    /* Slightly lighter grey for subheadings */
+}
+
+p {
+    color: #666;
+    /* Even lighter grey for text */
+    font-size: 16px;
+    /* Readable text size */
+}
+
+@media (min-width: 768px) {
+    h3 {
+        font-size: 22px;
+        /* Larger text for desktop */
+    }
+}
